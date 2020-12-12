@@ -1,8 +1,29 @@
 // Contains a large amount of unicode character conversion tables
 use std::collections::HashMap;
 
+/// This is a template string for ease of use when adding in characters
 pub const TEMPLATE: &str = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
 
+/// You may ignore this function if you simply just want to use
+/// this crate as is, however if you wish to add your own character sets
+/// to extend the ability of this crate, you can use this helper function
+/// to conveniently do things like this:
+/// ```
+/// use uniaxe::lookup::generate_table;
+/// use uniaxe::lookup::set_helper;
+///
+/// fn main() {
+///     let table = generate_table();
+///     // Extend the table
+///     table.extend(
+///         set_helper(
+///             "ａｂｃ ", // The unicode characters
+///             "abc",     // The ascii equivalents
+///         )
+///     );
+///     // You can now use this table in the uniaxe function below here
+/// }
+/// ```
 #[must_use]
 pub fn set_helper(from: &str, to: &str) -> HashMap<char, char> {
     // Provide a neat way of converting entire alphabets
@@ -13,6 +34,13 @@ pub fn set_helper(from: &str, to: &str) -> HashMap<char, char> {
     result
 }
 
+/// This is a critical function that will generate a hashmap
+/// The hashmap will have a character (the unicode character)
+/// that links to another character (the ascii equivalent character)
+///
+/// You must generate a table in order to use the `uniaxe` function
+///
+/// You are free to edit this lookup table to add your own characters
 #[must_use]
 pub fn generate_table() -> HashMap<char, char> {
     // Generate a lookup table

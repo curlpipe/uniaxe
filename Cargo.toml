@@ -3,5 +3,11 @@ name = "uniaxe"
 version = "0.1.0"
 authors = ["curlpipe <11898833+curlpipe@users.noreply.github.com>"]
 edition = "2018"
+license = "MIT"
+description = "A Rust crate to replace Unicode letters with Ascii equivalents"
+repository = "https://github.com/curlpipe/uniaxe"
+readme = "README.md"
+keywords = ["unicode", "ascii", "cleaning", "text-processing"]
+categories = ["text-processing", "unicode"]
 
 [dependencies]
