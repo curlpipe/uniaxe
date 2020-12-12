@@ -12,17 +12,15 @@ pub const TEMPLATE: &str = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ
 /// use uniaxe::lookup::generate_table;
 /// use uniaxe::lookup::set_helper;
 ///
-/// fn main() {
-///     let table = generate_table();
-///     // Extend the table
-///     table.extend(
-///         set_helper(
-///             "ａｂｃ ", // The unicode characters
-///             "abc",     // The ascii equivalents
-///         )
-///     );
-///     // You can now use this table in the uniaxe function below here
-/// }
+/// let table = generate_table();
+/// // Extend the table
+/// table.extend(
+///     set_helper(
+///         "ａｂｃ ", // The unicode characters
+///         "abc",     // The ascii equivalents
+///     )
+/// );
+/// // You can now use this table in the uniaxe function below here
 /// ```
 #[must_use]
 pub fn set_helper(from: &str, to: &str) -> HashMap<char, char> {

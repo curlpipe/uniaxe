@@ -14,11 +14,9 @@ use std::collections::HashMap;
 /// use uniaxe::uniaxe;
 /// use uniaxe::lookup::generate_table;
 ///
-/// fn main() {
-///     let table = generate_table();
-/// 	let text = uniaxe("𝙡𝙤𝙤𝙠 𝙖𝙩 𝙢𝙚 𝙞'𝙢 𝙨𝙤 𝙦𝙪𝙞𝙧𝙠𝙮", &table);
-/// 	println!("{}", text); // This will display "look at me i'm so quirky"
-/// }
+/// let table = generate_table();
+/// let text = uniaxe("𝙡𝙤𝙤𝙠 𝙖𝙩 𝙢𝙚 𝙞'𝙢 𝙨𝙤 𝙦𝙪𝙞𝙧𝙠𝙮", &table);
+/// println!("{}", text); // This will display "look at me i'm so quirky"
 /// ```
 ///
 /// This function will always return a string, so no need to handle any errors
