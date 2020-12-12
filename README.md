@@ -34,10 +34,12 @@ cargo add uniaxe
 I aim to keep the uniaxe api simple, as it should be.
 
 ```rust
+use uniaxe::lookup::generate_table;
 use uniaxe::uniaxe;
 
 fn main() {
-	let text = uniaxe("𝙡𝙤𝙤𝙠 𝙖𝙩 𝙢𝙚 𝙞'𝙢 𝙨𝙤 𝙦𝙪𝙞𝙧𝙠𝙮");
+        let table = generate_table();
+	let text = uniaxe("𝙡𝙤𝙤𝙠 𝙖𝙩 𝙢𝙚 𝙞'𝙢 𝙨𝙤 𝙦𝙪𝙞𝙧𝙠𝙮", &table);
 	println!("{}", text); // This will display "look at me i'm so quirky"
 }
 ```
