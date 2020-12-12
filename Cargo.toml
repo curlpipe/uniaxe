@@ -8,6 +8,6 @@ description = "A Rust crate to replace Unicode letters with Ascii equivalents"
 repository = "https://github.com/curlpipe/uniaxe"
 readme = "README.md"
 keywords = ["unicode", "ascii", "cleaning", "text-processing"]
-categories = ["text-processing", "unicode"]
+categories = ["text-processing"]
 
 [dependencies]
