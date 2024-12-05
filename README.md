@@ -9,7 +9,7 @@ Here are some possible uses of this crate:
 
 - Destruction of annoying unicode characters in people's names / messages.
 - Destruction of unicode characters in environments where unicode is not allowed.
-- Creating a filter for a messaging application (would allow you to stop stupid things like those with a mental age of 2 from spamming `🄵🅄🄲🄺 🅈🄾🅄` and thinking they're the bees knees)
+- Creating a filter for a messaging application (would allow you to stop stupid things like those devious users spamming `🄵🅄🄲🄺` and thinking they're the bees knees)
 
 I created this crate for the purpose of my mail spam filter experiment, I wanted to be able to prevent junk mail with unicode characters in them from slipping through and I couldn't find an existing crate or library in any other language.
 
